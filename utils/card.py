@@ -6,29 +6,15 @@ class Symbol:
         self.color = color
         self.icon = icon
 
-class Card(Symbol):
+class Card(Symbol):  # The Card class inherits from Symbol class
     def __init__(self, color, icon, value) -> str:
         super().__init__(color, icon)
         self.value = value
 
     
-    def generating_cards(self):
+    def __str__ (self):    # def the function that creat one card
         
         return f"{self.color}{self.icon}{self.value}"
 
-# call the card to generate the cards
-colorr = ["Black", "Red"]
-iconn = ["♥", "♦", "♣", "♠"]
-vallue = ['A', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K']
-counter_of_cardes = 0
-for each_color in colorr:
-    for each_icon in iconn:
-        for each_value in vallue:
-            C = Card("Black","♦","3")
-            print(C.generating_cards())
-
-            #counter_of_cardes += 1
-
-            
-#print(counter_of_cardes)
-           
+# C = Card('Black',"♠","6")
+# print(C)
